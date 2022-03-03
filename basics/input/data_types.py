@@ -7,4 +7,4 @@ height = float(input())
 print("How much do you weight(in kg)?")
 weight = float(input())
 bmi = weight/(height*height)#height**2 = height*height
-print(f"{name} your are {age} yeasr old. Your BMI is {bmi:.2f}")
+print(f"{name} your are {age} years old. Your BMI is {bmi:.2f}")
