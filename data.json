@@ -1,0 +1,18 @@
+[
+  {
+    "song_id": "1",
+    "song_title": "Zombie",
+    "artist_id": "14",
+    "album_id": 1,
+    "duration": 301.123,
+    "year": "1994"
+  },
+  {
+    "song_id": "2",
+    "song_title": "In The End",
+    "artist_id": "35",
+    "album_id": 9,
+    "duration": 271.405,
+    "year": 2002
+  }
+]
