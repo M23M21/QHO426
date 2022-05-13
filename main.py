@@ -1,29 +1,29 @@
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
+from person import Person
+from database import Database 
 
-fig, ax = plt.subplots()
-boxes = []
+db = Database("Piotr")
+print(f"Welcome to {db.name}")
 
-def init():
-  global boxes
-  boxes.append({'x': [3, 3, 4, 4, 3], 'y': [3, 4, 4, 3, 3]})
-  boxes.append({'x': [2, 2, 5, 5, 2], 'y': [2, 5, 5, 2, 2]})
-  boxes.append({'x': [1, 1, 6, 6, 1], 'y': [1, 6, 6, 1, 1]})
-  
-def animate(frame):
-  global boxes, ax
-  box_index = frame % 3
-  ax.set_xlim(0, 7)
-  ax.set_ylim(0, 7)
-  ax.plot(boxes[box_index]['x'], boxes[box_index]['y'])
-  
-def run():
-  global fig
-  squares_animation = animation.FuncAnimation(fig,
-                                              animate, 
-                                              frames = 3, 
-                                              interval = 1000,
-                                              init_func = init)
-  plt.show()
-  
-run()
+while True:
+    print('''
+        \nChoose an option:
+          1-Add a new member
+          2-Remove a member
+          3-Display all members
+          4-Exit        
+          ''')
+    opt = int(input("Enter choice: "))
+    if opt == 1:
+        name = input("Enter name: ")
+        age = int(input("Enter age: "))
+        p = Person(name, age)
+        db.add_person(p)
+    elif opt == 2:
+        name = input("Enter name of person to be removed: ")
+        for person in db.people:
+            if person.name == name:
+                db.remove_person(person)
+    elif opt == 3:
+        db.display_all()
+    elif opt == 4:
+        break
