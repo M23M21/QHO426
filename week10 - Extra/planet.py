@@ -34,25 +34,3 @@ if (__name__ == "__main__"):
   planet.add_human(prins)
   print(repr(planet))
   print(planet)
-  def grow(self):
-    self.age += 1
-
-  def move(self, distance):
-    potential_energy = self.energy - distance
-    if (potential_energy < 0):
-      self.energy = 0
-      return self.energy - abs(potential_energy)
-    else:
-      self.energy = potential_energy
-      return 0
-
-if (__name__ == "__main__"):
-  robot = Robot()
-  Robot.the_laws()
-  print(repr(robot))
-  robot.move(10)
-  print(repr(robot))
-  robot.eat(5)
-  print(repr(robot))
-  robot.eat(20)
-  print(repr(robot))
