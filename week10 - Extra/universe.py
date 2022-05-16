@@ -56,7 +56,7 @@ if (__name__ == "__main__"):
   universe.generate()
   universe.show_populations()
 
-"""
+
 
 from planet import Planet
 from planet import Planet
@@ -115,4 +115,3 @@ if (__name__ == "__main__"):
   universe.generate()
   universe.generate()
   universe.show_populations()
-"""
